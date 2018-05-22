@@ -6,31 +6,31 @@ angular.module('myApp', [])
       fetch();
     });
 
-    $scope.search = "toronto";
+    $scope.search = "";
 
     function fetch(){
-      // $http.get("http://opentable.herokuapp.com/api/restaurants?city=" + $scope.search)
-      // .then(function(response){ 
-      //   $scope.details = response.data; 
-      //   console.log($scope.details);
-      // });
+
 
       $http.get("http://opentable.herokuapp.com/api/restaurants?city=" + $scope.search)
       .then(function(response){ $scope.related = response.data;
-        // var result = related.split(" ");
         
-        // var my_data=$scope.related;
-        var my_json = JSON.stringify(result);
-        console.log(result); 
+        console.log($scope.related); 
+        console.log($scope.related.current_page)
       });
+
+      function inc_page()
+      {
+        return $scope.current_page++;
+      }
+
     }
 
-    
     $scope.update = function(movie){
       $scope.search = movie.name;
     };
 
     $scope.select = function(){
       this.setSelectionRange(0, this.value.length);
-    }
+    };
+   
   });
