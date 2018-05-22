@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="MovieController">
+<html lang="en" ng-app="myApp" ng-controller="RestrauController">
     
   <head>
     <title ng-bind="'Fastr - ' + details.Title"></title>
@@ -15,7 +15,7 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#"><b>Fastr</b> <span class="span-style">Movie Browser</span></a>
+            <a class="navbar-brand" href="#"><b>Fastr</b> <span class="span-style">Restaurant Browser</span></a>
           </div>
         </div>
       </nav>
@@ -31,7 +31,7 @@
         </div>
 
 
-        <div ng-app="myApp" ng-controller="MovieController">
+        <div ng-app="myApp" ng-controller="RestrauController">
 
                   
             <table class="table table-striped table-condensed">
@@ -54,7 +54,7 @@
             </table> 
         </div>
         
-        <div ng-controller="MovieController">
+        <div ng-controller="RestrauController">
             <button ng-click="inc_page()">Next Page</button>
             <p>The page number is {{count}}.</p>
         </div>
