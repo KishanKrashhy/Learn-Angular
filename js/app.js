@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp', [])
-  .controller('MovieController', function($scope, $http){
+  .controller('RestrauController', function($scope, $http){
     $scope.$watch('search', function() {
       fetch();
     });
@@ -25,8 +25,8 @@ angular.module('myApp', [])
 
     }
 
-    $scope.update = function(movie){
-      $scope.search = movie.name;
+    $scope.update = function(city){
+      $scope.search = city.name;
     };
 
     $scope.select = function(){
